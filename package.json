@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon ./demo",
     "start": "node ./demo",
-    "test": "jest ./ --watchAll"
+    "test": "jest ./ --watchAll --coverage"
   },
   "keywords": ["node", "state", "loader", "progress", "display", "react", "cli"],
   "author": "Ryan P. Hansen",

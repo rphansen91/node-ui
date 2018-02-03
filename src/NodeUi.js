@@ -11,6 +11,7 @@ module.exports = function NodeUi (children) {
     mounted = true
     addAllComponents(children)
     render()
+    return this
   }
 
   function output () {

@@ -14,7 +14,7 @@ class Component {
   }
 
   render () {
-    throw new Error('Component did not implement render function')
+    throw new Error(`"${this.constructor.name}" did not implement render function`)
   }
 }
 

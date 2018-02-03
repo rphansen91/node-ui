@@ -24,6 +24,7 @@ function startDemo () {
     'Function Demo': functionDemo
   })
   .then(renderUi)
+  .catch(startDemo)
 }
 
 function stringDemo () {
@@ -70,10 +71,10 @@ function cryptoDemo () {
 
 function renderUi (cmps) {
   var ui = NodeUi([].concat(cmps))
-  ui.init()
   process.stdin.resume()
   process.stdin.setEncoding('utf8')
   process.stdin.once('data', handleKey)
+  ui.init()
 
   function handleKey () {
     ui.remove()

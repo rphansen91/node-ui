@@ -30,13 +30,14 @@ module.exports = class Ticker extends Component {
   componentDidMount () {
     const symbols = this.symbols()
     this.unsub = subscribe(symbols, ({ FROMSYMBOL, PRICE }) => {
-      if (typeof PRICE === 'number') {
+      if (!this.unmmounted && typeof PRICE === 'number') {
         this.setPrice(FROMSYMBOL, PRICE)
       }
     })
   }
 
   componentDidUnmount () {
+    this.unmmounted = true
     this.unsub()
   }
 
