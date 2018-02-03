@@ -1,0 +1,29 @@
+{
+  "name": "node-ui",
+  "version": "1.0.0",
+  "description": "Create node cli components using a stateful 'react'like api",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./demo",
+    "start": "node ./demo",
+    "test": "jest ./ --watchAll"
+  },
+  "keywords": ["node", "state", "loader", "progress", "display", "react", "cli"],
+  "author": "Ryan P. Hansen",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/rphansen91/node-ui.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "clear": "0.0.1",
+    "cli-table": "^0.3.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "cli-apply": "^1.0.7",
+    "isomorphic-fetch": "^2.2.1",
+    "socket.io": "^2.0.4"
+  }
+}
